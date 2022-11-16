@@ -1,0 +1,11 @@
+.navbar{
+display: flex;
+align-items: center;
+}
+.logoone{
+    padding-left: 3%
+}
+.onleft{
+    display: flex;
+    gap: 1.5rem;
+}

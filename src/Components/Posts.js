@@ -3,21 +3,37 @@ import { useState } from 'react';
 import "./posts.css"
 const Posts = ({posts, loading}) => {
     const [searchTitle, setSearchTitle] = useState('');
+    const [items, setItems]= useState(posts)
+    
     if(loading){
         return <h2>loading...</h2>
     }
+    
+    const filterMenu = (tag) => {
+        const updatedItems = posts.filter((curElem) => {
+            return curElem.tag === tag;
+        });
+
+        setItems(updatedItems);
+    }
   return (
     <div>
-        
+    <div className="menu-tabs container">
+                <div className="menu-tab d-flex justify-content-center m-4">
+                    <button  className="btn text-bg-light px-2 " onClick={() => setItems(posts)}>Resources</button>
+                    <button className="btn text-bg-light px-2" onClick={() => filterMenu('request')} >Requests</button>
+                     <button className="btn text-bg-light px-2 " onClick={() => filterMenu('user')} >Users </button>
+                </div>
+    </div>
         <input
-        className='dabba'
+        className='dabba '
         type="text"
         placeholder=''
         onChange={(e)=>setSearchTitle(e.target.value)}
 
         />
     < div class="posts-list">
-        {posts.filter((value)=>{
+        {items.filter((value)=>{
             if(searchTitle===''|| value.title.toLowerCase().includes(searchTitle.toLowerCase())){
                 return value;
             }

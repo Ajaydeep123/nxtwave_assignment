@@ -6,7 +6,6 @@ import axios from 'axios';
 import Posts from './Components/Posts';
 import Pagination from './Components/Pagination';
 import Navbar from './Components/Navbar';
-import Options from './Components/Options';
 const App = () => {
     const[posts, setPosts] = useState([]);
     const[loading, setLoading]= useState(false);
@@ -41,7 +40,7 @@ console.log(posts);
     <div>
      
     <Navbar />
-    <Options />
+    {/* <Options /> */}
     
     <div className='container-fluid mt-5'>
  

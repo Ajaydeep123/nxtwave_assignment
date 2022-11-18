@@ -10,9 +10,12 @@ const App = () => {
       
      <BrowserRouter>
       <Navbar />
+      {/* <Homepage /> */}
       <Routes>
       <Route path='/' element={<Homepage />}/>
-        <Route path='/additems' element={<AddItems />}/>
+      
+      <Route path='/additems' element={<AddItems />}/>
+
       </Routes>
      </BrowserRouter>
   )

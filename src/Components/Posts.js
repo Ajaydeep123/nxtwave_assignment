@@ -27,6 +27,7 @@ const Posts = ({posts, loading}) => {
     </div>
         <input
         className='dabba '
+        style={{paddingBottom:"-2rem"}}
         type="text"
         placeholder=''
         onChange={(e)=>setSearchTitle(e.target.value)}

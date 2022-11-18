@@ -8,9 +8,8 @@ const Navbar = () => {
 <nav class="navbar bg-light shadow-sm p-3 mb-5 bg-white rounded ">
   {/* <div class="container-fluid flex justify-between items-center w-full h-20 px-4 "> */}
     <div className='logoone'>
-    {/* <Link to="/"> */}
+
     <img src={companyLogo} alt="Navbox"/>
-    {/* </Link> */}
     </div>
     <div className='onleft'>
       <Link to="/AddItems">

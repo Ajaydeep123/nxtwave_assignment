@@ -37,6 +37,8 @@ const Posts = ({posts, loading}) => {
         {items.filter((value)=>{
             if(searchTitle===''|| value.title.toLowerCase().includes(searchTitle.toLowerCase())){
                 return value;
+            }else{
+                //
             }
         }).map(post=>(
             // <div key={post.id} >

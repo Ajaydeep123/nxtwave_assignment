@@ -13,7 +13,7 @@ const App = () => {
       {/* <Homepage /> */}
       <Routes>
       <Route path='/' element={<Homepage />}/>
-      <Route path='/nxtwave_assignment' element={<Homepage />}/>
+      <Route path='/nxtwave_assignment/' element={<Homepage />}/>
       <Route path='/additems' element={<AddItems />}/>
 
       </Routes>
